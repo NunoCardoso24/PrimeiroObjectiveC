@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43549E41A2B467B00C411FD /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B43549E31A2B467B00C411FD /* FailedBankInfo.m */; };
+		B43549E71A2B467B00C411FD /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B43549E61A2B467B00C411FD /* FailedBankDetails.m */; };
 		B4B1C69E1A2796ED00E43047 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B1C69D1A2796ED00E43047 /* main.m */; };
 		B4B1C6A11A2796ED00E43047 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B1C6A01A2796ED00E43047 /* AppDelegate.m */; };
 		B4B1C6A41A2796ED00E43047 /* PrimeiroObjectiveC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4B1C6A21A2796ED00E43047 /* PrimeiroObjectiveC.xcdatamodeld */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B43549E21A2B467B00C411FD /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		B43549E31A2B467B00C411FD /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		B43549E51A2B467B00C411FD /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
+		B43549E61A2B467B00C411FD /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
 		B4B1C6981A2796ED00E43047 /* PrimeiroObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B1C69C1A2796ED00E43047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B1C69D1A2796ED00E43047 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 				B4B1C6AB1A2796ED00E43047 /* Images.xcassets */,
 				B4B1C6AD1A2796ED00E43047 /* LaunchScreen.xib */,
 				B4B1C6A21A2796ED00E43047 /* PrimeiroObjectiveC.xcdatamodeld */,
+				B43549E51A2B467B00C411FD /* FailedBankDetails.h */,
+				B43549E61A2B467B00C411FD /* FailedBankDetails.m */,
+				B43549E21A2B467B00C411FD /* FailedBankInfo.h */,
+				B43549E31A2B467B00C411FD /* FailedBankInfo.m */,
 				B4B1C69B1A2796ED00E43047 /* Supporting Files */,
 			);
 			path = PrimeiroObjectiveC;
@@ -223,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B1C6A41A2796ED00E43047 /* PrimeiroObjectiveC.xcdatamodeld in Sources */,
+				B43549E71A2B467B00C411FD /* FailedBankDetails.m in Sources */,
 				B4B1C6A11A2796ED00E43047 /* AppDelegate.m in Sources */,
+				B43549E41A2B467B00C411FD /* FailedBankInfo.m in Sources */,
 				B4B1C6A71A2796ED00E43047 /* ViewController.m in Sources */,
 				B4B1C69E1A2796ED00E43047 /* main.m in Sources */,
 			);
@@ -418,6 +430,7 @@
 				B4B1C6C01A2796ED00E43047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B1C6C11A2796ED00E43047 /* Build configuration list for PBXNativeTarget "PrimeiroObjectiveCTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				B4B1C6C31A2796ED00E43047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

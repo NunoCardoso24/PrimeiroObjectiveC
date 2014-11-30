@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FailedBankInfo.h"
+#import "FailedBankDetails.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    FailedBankInfo *failedBankInfo = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"FailedBankInfo"
+                                       inManagedObjectContext:context];
+    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
+    [failedBankInfo setValue:@"Testville" forKey:@"city"];
+    [failedBankInfo setValue:@"Testland" forKey:@"state"];
+    FailedBankDetails *failedBankDetails = [NSEntityDescription
+                                          insertNewObjectForEntityForName:@"FailedBankDetails"
+                                          inManagedObjectContext:context];
+    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
+    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
+    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
+    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    NSLog(@"MEIO       MEIO ");
+    
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"FailedBankInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (FailedBankInfo *info in fetchedObjects) {
+        NSLog(@"Name: %@", [info valueForKey:@"name"]);
+        FailedBankDetails *details = [info valueForKey:@"details"];
+        NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }
