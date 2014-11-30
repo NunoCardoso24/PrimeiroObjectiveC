@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "FailedBankInfo.h"
 #import "FailedBankDetails.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,12 +17,13 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSManagedObjectContext *context = [self managedObjectContext];
     FailedBankInfo *failedBankInfo = [NSEntityDescription
                                        insertNewObjectForEntityForName:@"FailedBankInfo"
                                        inManagedObjectContext:context];
-    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
+    [failedBankInfo setValue:@"Test Bank222" forKey:@"name"];
     [failedBankInfo setValue:@"Testville" forKey:@"city"];
     [failedBankInfo setValue:@"Testland" forKey:@"state"];
     FailedBankDetails *failedBankDetails = [NSEntityDescription
@@ -52,7 +53,9 @@
         FailedBankDetails *details = [info valueForKey:@"details"];
         NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
     }
-    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    ViewController *controller = (ViewController *)navigationController;
+    controller.managedObjectContext = self.managedObjectContext;
     // Override point for customization after application launch.
     return YES;
 }

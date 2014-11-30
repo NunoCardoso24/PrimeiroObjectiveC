@@ -13,7 +13,7 @@
         <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FailedBankDetails" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FailedBankInfo" positionX="-927" positionY="-549" width="128" height="103"/>
+        <element name="FailedBankInfo" positionX="-992" positionY="-418" width="128" height="103"/>
         <element name="FailedBankDetails" positionX="-956" positionY="-756" width="128" height="103"/>
     </elements>
 </model>

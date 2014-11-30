@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class FailedBankDetails;
 
 @interface FailedBankInfo : NSManagedObject
 
